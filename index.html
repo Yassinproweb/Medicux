@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=1280">
+
+  <!-- link to google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400..700;1,400..700&family=BioRhyme:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- linkto tailwindcss -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- link to phosphor icons -->
+  <link rel="stylesheet" href="regular.css">
+  <link rel="stylesheet" href="bold.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- link to favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="logo.png">
+
+  <!-- title of the page -->
+  <title>Medicux</title>
+</head>
+<body class="pt-16">
+  <header class="fixed top-0 left-0 w-full items-center justify-between py-5 bg-[--f] rounded-xl z-[1000]">
+    <div class="w-fit items-center gap-2.5">
+      <div id="title" class="w-fit items-center gap-0.5">
+        <img src="/logo.png" alt="Medicex logo" class="w-9">
+        <h3 class="text-4xl text-[--d] font-bold mono">Medicux</h3>
+      </div>
+      <span class="w-0.5 h-9 bg-[#3A3B9155]"></span>
+      <div id="location" class="w-fit flex-col gap-0">
+        <label for="select" class="text-xs text-[--t] flex items-center gap-0.5"><i class="ph ph-map-pin text-lg"></i> Location</label>
+        <select id="select" class="text-base text-[--d] font-medium pl-2.5 -mt-1" aria-placeholder="Select Your Location">
+          <option value="Uganda">Uganda</option>
+          <option value="Kenya">Kenya</option>
+          <option value="Rwanda">Rwanda</option>
+          <option value="Tanzania">Tanzania</option>
+          <option value="Burundi">Burundi</option>
+        </select>
+      </div>
+    </div>
+    <div class="w-fit items-center gap-2 rounded-3xl bg-[--w] p-1 overflow-hidden outline outline-1 outline-offset-[0px] outline-[--l]">
+      <span class="flex items-center justify-center w-9 aspect-square rounded-3xl bg-[--y] shadow-sm shadow-[--l] outline outline-1 outline-offset-[0px] outline-[--l]">
+        <i class="ph ph-magnifying-glass text-xl text-[--d]"></i>
+      </span>
+      <input type="search" name="keyword" id="keyword" class="w-[210px] py-1.5 px-0.5 pr-5 text-base text-[--t] font-medium placeholder:text-[--l]" placeholder="Medical & Health Care">
+    </div>
+    <div class="w-fit items-center justify-end gap-5">
+      <i class="ph ph-bell-ringing text-3xl"></i>
+      <i class="ph ph-shopping-cart text-3xl"></i>
+      <i class="ph ph-sign-in text-3xl"></i>
+    </div>
+  </header>
+
+  <section id="hero" class="flex-col items-center gap-7">
+    <div class="relative w-full h-fit min-h-[567px] item-end justify-between bg-[--d] rounded-xl overflow-hidden">
+      <div class="w-1/2 flex-col justify-center gap-5 px-7 pb-7">
+        <h1 class="-ml-6 text-[10.85vw] font-black">Healthc<span>are</span></h1>
+        <h2 class="text-4xl text-[#d2edf6] font-extrabold leading-[1.25]">Quality <span class="text-[--b]">care</span>, cutting-edge <span class="text-[--b]">technology</span> & dedicated <span class="text-[--b]">professionals</span> for you.</h2>
+        <p class="text-[--f] text-lg font-medium opacity-75 leading-tight">Providing compassionate and priority healthcare at Medicux Hospital. Your wellness matters to us every step of the way.</p>
+        <button class="w-fit text-[--d] capitalize px-9 py-2.5 rounded-3xl bg-[--y]">Consult us</button>
+        <div class="w-full items-center justify-between mt-9">
+          <span class="w-fit flex items-center gap-1.5">
+            <span class="w-7 aspect-square rounded-3xl text-[--t] bg-[--r] flex items-center justify-center">
+              <i class="ph ph-seal-check text-lg"></i>
+            </span>
+            <span class="text-[--f] opacity-75">Approved Doctors</span>
+          </span>
+          <span class="w-fit flex items-center gap-1.5">
+            <span class="w-7 aspect-square rounded-3xl text-[--t] bg-[--g] flex items-center justify-center">
+              <i class="ph ph-prescription text-lg"></i>
+            </span>
+            <span class="text-[--f] opacity-75">Digital Prescriptions</span>
+          </span>
+          <span class="w-fit flex items-center gap-1.5">
+            <span class="w-7 aspect-square rounded-3xl text-[--t] bg-[--y] flex items-center justify-center">
+              <i class="ph ph-projector-screen-chart text-lg"></i>
+            </span>
+            <span class="text-[--f] opacity-75">Medical Chart</span>
+          </span>
+        </div>
+      </div>
+      <div class="w-1/2 aspect-square bg-[url('/report.jpg')] bg-cover bg-center border-2 border-[--d] rounded-r-xl"></div>
+    </div>
+    <div class="w-full grid grid-cols-4 gap-5">
+      <div class="relative w-full aspect-square flex-col p-5 pr-0 rounded-2xl bg-[--y] text-[--d] overflow-hidden">
+        <img src="/online.png" alt="Online Sessions" class="absolute w-40 -right-0 bottom-7 object-center object-contain">
+        <div class="w-2/3 h-full flex-col justify-between z-10">
+          <h3 class="text-2xl font-bold capitalize leading-tight">Instant&nbsp;online consultation</h3>
+          <i class="ph ph-arrow-right text-3xl text-[--y] w-11 aspect-square rounded-full bg-[--d] flex items-center justify-center"></i>
+        </div>
+      </div>
+      <div class="relative w-full aspect-[4/4] flex-col p-5 pr-0 rounded-2xl bg-[--g] text-[--d] overflow-hidden">
+        <img src="/doctor.png" alt="Find Doctors" class="absolute w-40 -right-0 bottom-7 object-center object-contain">
+        <div class="w-full h-full flex-col justify-between z-10">
+          <h3 class="text-2xl font-bold capitalize leading-tight">find doctors in<br>all fields</h3>
+          <i class="ph ph-arrow-right text-3xl text-[--g] w-11 aspect-square rounded-full bg-[--d] flex items-center justify-center"></i>
+        </div>
+      </div>
+      <div class="relative w-full aspect-[4/4] flex-col p-5 pr-0 rounded-2xl bg-[--r] text-[--d] overflow-hidden">
+        <img src="/tablets.png" alt="Tabs & Capsules" class="absolute w-40 right-3.5 bottom-7 object-center object-contain">
+        <div class="w-2/3 h-full flex-col justify-between z-10">
+          <h3 class="text-2xl font-bold capitalize leading-tight">High quality medication</h3>
+          <i class="ph ph-arrow-right text-3xl text-[--r] w-11 aspect-square rounded-full bg-[--d] flex items-center justify-center"></i>
+        </div>
+      </div>
+      <div class="relative w-full aspect-[4/4] flex-col p-5 pr-0 rounded-2xl bg-[--b] text-[--d] overflow-hidden">
+        <img src="/test.png" alt="Laboratory Tests" class="absolute w-40 right-3.5 bottom-7 object-center object-contain">
+        <div class="w-2/3 h-full flex-col justify-between z-10">
+          <h3 class="text-2xl font-bold capitalize leading-tight">Laboratory<br>Tests</h3>
+          <i class="ph ph-arrow-right text-3xl text-[--b] w-11 aspect-square rounded-full bg-[--d] flex items-center justify-center"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="specials" class="flex-col items-center gap-9">
+    <div class="w-full flex-col justify-center gap-7">
+      <h3 class="text-4xl text-[--d] font-extrabold">Explore Diverse Specializations Throughout Our <br>Comprehensive Hospital Network.</h3>
+      <div class="doctors w-full grid grid-flow-col gap-5 p-5 overflow-x-scroll overflow-y-hidden snap-mandatory snap-x">
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">Allergist</p>
+          <img src="/allergist.png" alt="Allergist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">Anesthesiologist</p>
+          <img src="/anesthesiologist.png" alt="Anesthesiologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">audiologist</p>
+          <img src="/audiologist.png" alt="audiologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold leading-[1]">biomedical engineer</p>
+          <img src="/biomedical.png" alt="biomedical engineer" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">Cardiologist</p>
+          <img src="/cardiologist.png" alt="Cardiologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">dentist</p>
+          <img src="/dentist.png" alt="dentist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">dermatologist</p>
+          <img src="/dermatologist.png" alt="dermatologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">endocrinologist</p>
+          <img src="/endocrinologist.png" alt="endocrinologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold leading-[1]">genetic engineer</p>
+          <img src="/genetic.png" alt="genetic engineer" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">gynaecologist</p>
+          <img src="/gynaecologist.png" alt="gynaecologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">hematologist</p>
+          <img src="/hematologist.png" alt="hematologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-normal snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">hospitalist</p>
+          <img src="/hospitalist.png" alt="hospitalist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">nephrologist</p>
+          <img src="/nephrologist.png" alt="nephrologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">neurologist</p>
+          <img src="/neurologist.png" alt="neurologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">nutritionist</p>
+          <img src="/nutritionist.png" alt="nutritionist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">oncologist</p>
+          <img src="/oncologist.png" alt="oncologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">opthalmologist</p>
+          <img src="/opthalmologist.png" alt="opthalmologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">orthopedist</p>
+          <img src="/orthopedist.png" alt="orthopedist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">otolaryngologist</p>
+          <img src="/otolaryngologist.png" alt="otolaryngologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">pathologist</p>
+          <img src="/pathologist.png" alt="pathologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">pediatrician</p>
+          <img src="/pediatrician.png" alt="pediatrician" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">pharmacist</p>
+          <img src="/pharmacist.png" alt="pharmacist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">physiotherapist</p>
+          <img src="/physiotherapist.png" alt="physiotherapist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">podiatrist</p>
+          <img src="/podiatrist.png" alt="podiatrist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">psychiatrist</p>
+          <img src="/psychiatrist.png" alt="psychiatrist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">pulmonologist</p>
+          <img src="/pulmonologist.png" alt="pulmonologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">radiologist</p>
+          <img src="/radiologist.png" alt="radiologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">rheumatologist</p>
+          <img src="/rheumatologist.png" alt="rheumatologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">surgeon</p>
+          <img src="/surgeon.png" alt="surgeon" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">therapist</p>
+          <img src="/therapist.png" alt="therapist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">urologist</p>
+          <img src="/urologist.png" alt="urologist" class="h-14 aspect-square opacity-75">
+        </span>
+        <span class="special relative snap-always snap-center w-56 h-14 flex items-center justify-between px-5 pr-3.5 rounded-3xl shadow-md shadow-[--l] outline outline-2 outline-[--t] bg-[--f] hover:bg-[--d] overflow-hidden">
+          <p class="text-lg text-[--d] font-semibold">veterinarian</p>
+          <img src="/veterinarian.png" alt="veterinarian" class="h-14 aspect-square opacity-75">
+        </span>
+      </div>
+      <div class="doctors mt-5 w-full grid grid-flow-col gap-5 p-5 overflow-x-scroll overflow-y-hidden snap-mandatory snap-x">
+        <!-- allergists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">allergist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. Ibrāhīm<br>Hasan</p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">allergist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. Ssozi<br>Ahmad</p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">allergist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. Zaynab<br>Madīnah</p>
+        </div>
+        <!-- anesthesiologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">Anesthesiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. Hussein<br>Kato</p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">Anesthesiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. Steven<br>Mūsā</p>
+        </div>
+        <!-- audiologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">audiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. Murādillah<br>Hishām</p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">audiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. Ibrāhīm<br>Muhsin</p>
+        </div>
+        <!-- biomedical engineers -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">biomedical engineer</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">biomedical engineer</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">biomedical engineer</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- cardiologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">cardiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">cardiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">cardiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- dentists  -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">dentist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">dentist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">dentist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">dentist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- dermatologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">dermatologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">dermatologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">dermatologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- endocrinologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">endocrinologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">endocrinologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- genetic engineer -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">genetic engineer</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- gynaecologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">gynaecologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">gynaecologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">gynaecologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- hematologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">hematologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">hematologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">hematologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- hospitalists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">hospitalist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">hospitalist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">hospitalist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- nephrologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">nephrologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">nephrologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- neurologist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">neurologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">neurologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- nutritionists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">nutritionist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- oncologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">oncologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">oncologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">oncologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- opthalmologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">opthalmologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">opthalmologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- orthopedists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">orthopedist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">orthopedist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- otolaryngologists -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">otolaryngologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- pathologist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">pathologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- pediatrician -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">pediatrician</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- pharmacist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">pharmacist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">pharmacist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- physiotherapist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">physiotherapist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- podiatrist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">podiatrist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- psychiatrist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">psychiatrist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- pulmonologist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">pulmonologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- radiologist -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">radiologist</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+        <!-- surgeon -->
+        <div class="relative w-72 aspect-[3/3.25] flex-col justify-between p-7 bg-[--c] rounded-3xl shadow overflow-clip">
+          <p class="text-[--t] text-2xl font-bold leading-[1] capitalize">surgeon</p>
+          <p class="text-[--t] text-2xl font-semibold leading-[1]">Dr. <br></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="flex-col items-center gap-9">
+    <div class="w-full aspect-[4/2.25] flex-col gap-9 px-16 py-24 rounded-[35px] bg-[--d]">
+      <div class="w-full items-end justify-between">
+        <h3 class="text-4xl text-[--w] font-bold capitalize">frequently book <br>hospital services</h3>
+        <button type="button" class="text-xl text-[--w] font-medium flex items-center justify-end gap-1.5 capitalize">View all <i class="ph ph-circles-three-plus text-3xl"></i></button>
+      </div>
+      <div class="w-full grid grid-cols-3 gap-5">
+        <div class="relative w-full flex-col justify-between p-7 rounded-2xl aspect-[4/4] bg-[#b9d7ff] overflow-hidden">
+          <div class="w-full flex-col gap-2">
+            <span class="w-fit text-base text-[--d] capitalize bg-[--b] p-2 py-0.5 font-bold rounded">60% off</span>
+            <h4 class="text-2xl text-[--d] font-bold capitalize leading-[1.1]">dental care<br>oral checkup</h4>
+            <p class="text-[--t] mt-5"></p>
+          </div>
+          <img src="/screening.png" alt="bookings" class="absolute w-40 bottom-2.5 right-1 opacity-75">
+          <span class="text-[--d] text-3xl font-bold flex items-end gap-1.5">$128 <span class="text-base text-[--l] line-through opacity-50">$320</span></span>
+        </div>
+        <div class="relative w-full flex-col justify-between p-7 rounded-2xl aspect-[4/4] bg-[#d3ffe7] overflow-hidden">
+          <div class="w-full flex-col gap-2">
+            <span class="w-fit text-base text-[--d] capitalize bg-[--g] p-2 py-0.5 font-bold rounded">60% off</span>
+            <h4 class="text-2xl text-[--d] font-bold capitalize leading-[1.1]">mRI/cT &<br>x-ray scan</h4>
+            <p class="text-[--t] mt-5"></p>
+          </div>
+          <img src="/mriscan.png" alt="bookings" class="absolute w-40 bottom-3 right-1 opacity-75">
+          <span class="text-[--d] text-3xl font-bold flex items-end gap-1.5">$128 <span class="text-base text-[--l] line-through opacity-50">$320</span></span>
+        </div>
+        <div class="relative w-full flex-col justify-between p-7 rounded-2xl aspect-[4/4] bg-[#ffc7e9] overflow-hidden">
+          <div class="w-full flex-col gap-2">
+            <span class="w-fit text-base text-[--d] capitalize bg-[--r] p-2 py-0.5 font-bold rounded">60% off</span>
+            <h4 class="text-2xl text-[--d] font-bold capitalize leading-[1.1]">bone & neck<br>orthopaedics care</h4>
+            <p class="text-[--t] mt-5"></p>
+          </div>
+          <img src="/orthopaedics.png" alt="bookings" class="absolute w-40 bottom-3 right-0 opacity-75">
+          <span class="text-[--d] text-3xl font-bold flex items-end gap-1.5">$128 <span class="text-base text-[--l] line-through opacity-50">$320</span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full aspect-[4/1.5] grid grid-cols-4 grid-rows-2 gap-5">
+      <div class="relative w-full flex-col col-span-2 row-span-2 justify-between p-9 py-12 rounded-[35px] bg-[--y]">
+        <img src="/scale.png" alt="dentist message" class="absolute w-20 right-9 top-12">
+        <div class="w-full flex-col gap-2 z-10">
+          <div class="w-fit items-center gap-2 bg-[--f] rounded-md px-3.5 py-1">
+            <span class="w-2 h-2 rounded bg-[--r]"></span>
+            <span class="w-fit text-[--d] font-medium">Podcast</span>
+          </div>
+          <h2 class="text-4xl text-[--d] font-extrabold leading-[1.05]">Nutrition &<br>Dental Health</h2>
+          <p class="text-base text-[--t]">The food we eat provides the nutrients <br>that our bodies and brains need to <br>function properly.</p>
+        </div>
+        <span class="w-14 aspect-square flex items-center justify-center rounded-[32px] bg-[--w] shadow-md z-10">
+          <i class="ph-fill ph-play text-xl text-[--d]"></i>
+        </span>
+        <div class="absolute w-fit bottom-3 right-9 items-center justify-between gap-3">
+          <img src="/rice.png" alt="nutrition" class="w-16">
+          <img src="/foodboard.png" alt="nutrition" class="w-14">
+        </div>
+      </div>
+      <div class="relative w-full flex-col col-span-2 row-span-1 justify-between p-12 py-7 rounded-[35px] bg-[--t]">
+        <div class="w-fit items-center gap-2 bg-[--f] rounded-md px-3.5 py-1">
+          <span class="w-2 h-2 rounded bg-[--r]"></span>
+          <span class="w-fit text-[--d] font-medium">Live Event</span>
+        </div>
+        <img src="/cardiology.png" alt="healthy heart" class="absolute w-28 right-9 top-9">
+        <h2 class="text-[--f] text-3xl font-bold capitalize">Healthy Habits for a <br>happy heart</h2>
+      </div>
+      <div class="relative w-full flex-col col-span-1 row-span-1 justify-end p-9 py-7 rounded-[35px] bg-[--b]">
+        <img src="/ambulance.png" alt="ambulance" class="absolute w-16 right-7 top-7">
+        <h2 class="text-[--d] text-5xl font-extrabold">11</h2>
+        <p class="text-lg text-[--t] font-semibold">Years of Experience</p>
+      </div>
+      <div class="relative w-full flex-col col-span-1 row-span-1 justify-end p-9 py-7 rounded-[35px] bg-[--g]">
+        <img src="/patient.png" alt="patient id" class="absolute w-16 right-7 top-7">
+        <h2 class="text-[--d] text-5xl font-extrabold">120k+</h2>
+        <p class="text-lg text-[--t] font-semibold">Happy Customers</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="customer" class="flex-col items-center justify-center gap-9">
+    <h3 class="text-4xl text-[--d] text-center font-extrabold">We have received over 2,500 5 star ratings from over <br>20,000 reviews on Google!</h3>
+    <div class="w-fit flex-col items-center justify-center gap-1.5">
+      <div class="w-fit items-center justify-center gap-1">
+        <i class="ph-fill ph-star text-[#00de81] text-4xl"></i>
+        <i class="ph-fill ph-star text-[#00de81] text-4xl"></i>
+        <i class="ph-fill ph-star text-[#00de81] text-4xl"></i>
+        <i class="ph-fill ph-star text-[#00de81] text-4xl"></i>
+        <i class="ph-fill ph-star-half text-[#00de81] text-4xl"></i>
+      </div>
+      <p class="text-[--d] text-lg font-semibold capitalize">Our average Google rating is 4.7</p>
+    </div>
+    <div class="relative w-full items-center gap-3.5 px-11 overflow-hidden">
+      <div class="customer w-full items-center justify-between gap-7 px-11 py-5 unhide">
+        <div class="w-1/3 items-center justify-center gap-3">
+          <img src="/dental.jpg" alt="dental clinic" class="w-16 aspect-square rounded-full object-center object-cover shadow-md shadow-[#0005]">
+          <div class="w-fit flex-col justify-center gap-0.5">
+            <h5 class="text-xl text-[--d] font-bold">Senior Dentist</h5>
+            <p class="text-[--t]">Dentee Oral Clinic</p>
+          </div>
+        </div>
+        <div class="w-2/3 items-center justify-center gap-3 py-7 px-3">
+          <i class="ph-fill ph-quotes text-7xl text-[#00de81] opacity-45 absolute -top-3 right-5"></i>
+          <p class="text-lg text-[--d] font-semibold">As a dentist, I'm immensely grateful to the pharmacy for reliably supplying the necessary tools and materials for patient care. Their support ensures top-notch dental services every time.</p>
+        </div>
+      </div>
+      <div class="customer w-full items-center justify-between gap-7 px-11 py-5">
+        <div class="w-1/3 items-center justify-center gap-3">
+          <img src="/muslimah.png" alt="dental clinic" class="w-16 aspect-square rounded-full object-center object-cover shadow-md shadow-[#0005]">
+          <div class="w-fit flex-col justify-center gap-0.5">
+            <h5 class="text-xl text-[--d] font-bold">Zamzam bint Muhsin</h5>
+            <p class="text-[--t]">New mother of twins</p>
+          </div>
+        </div>
+        <div class="w-2/3 items-center justify-center gap-3 py-7 px-3">
+          <i class="ph-fill ph-quotes text-7xl text-[#00de81] opacity-45 absolute -top-3 right-5"></i>
+          <p class="text-lg text-[--d] font-semibold">As a new mother, I cannot express enough gratitude to Medicux for their outstanding support during childbirth. Every moment felt guided and cared for, ensuring a smooth and memorable experience.</p>
+        </div>
+      </div>
+      <div class="customer w-full items-center justify-between gap-7 px-11 py-5">
+        <div class="w-1/3 items-center justify-center gap-3">
+          <img src="/trucker.jpg" alt="dental clinic" class="w-16 aspect-square rounded-full object-center object-cover shadow-md shadow-[#0005]">
+          <div class="w-fit flex-col justify-center gap-0.5">
+            <h5 class="text-xl text-[--d] font-bold">Ahmad bin Jābir</h5>
+            <p class="text-[--t]">Trailer Truck Driver</p>
+          </div>
+        </div>
+        <div class="w-2/3 items-center justify-center gap-3 py-7 px-3">
+          <i class="ph-fill ph-quotes text-7xl text-[#00de81] opacity-45 absolute -top-3 right-5"></i>
+          <p class="text-lg text-[--d] font-semibold">In my recovery journey from a car accident, Medicux played a pivotal role. Their attentive care and expert medical attention provided me with comfort and confidence every step of the way.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w-fit items-center justify-center gap-2 rounded-lg bg-none">
+      <span class="pins w-3.5 aspect-square rounded-3xl this"></span>
+      <span class="pins w-3.5 aspect-square rounded-3xl"></span>
+      <span class="pins w-3.5 aspect-square rounded-3xl"></span>
+    </div>
+  </section>
+
+  <section id="blogs" class="flex-col items-center gap-9">
+    <div class="w-full items-end justify-between">
+      <h3 class="text-3xl text-[--d] font-extrabold capitalize">read top articles from <br>health experts</h3>
+      <button type="button" class="text-lg text-[--t] font-medium flex items-center justify-end gap-1.5 capitalize">Read all blogs<i class="ph ph-newspaper-clipping text-3xl"></i></button>
+    </div>
+    <div class="w-full aspect-[4/1.5] items-center justify-between gap-7">
+      <div class="h-full flex-col justify-between aspect-square rounded-[45px] bg-[--f] px-9 py-7">
+        <span class="w-fit px-3 py-1.5 rounded-md border-2 border-[--t] text-[--t] font-semibold">Blog Topics</span>
+        <div class="w-full grid grid-cols-3 gap-5">
+          <div class="w-full aspect-square flex-col items-center justify-center rounded-2xl bg-[--r]">
+            <img src="/repair.png" alt="sms" class="w-2/4">
+          </div>
+          <div class="w-full aspect-square flex-col items-center justify-center rounded-full bg-[--g]">
+            <img src="/qualified.png" alt="sms" class="w-2/4">
+          </div>
+          <div class="w-full aspect-square flex-col items-center justify-center rounded-2xl bg-[--y]">
+            <img src="/medication.png" alt="sms" class="w-2/4">
+          </div>
+        </div>
+        <h2 class="text-[27px] text-[--t] font-bold capitalize leading-tight">find the best topics <br>on drugs and healthcare</h2>
+      </div>
+      <div class="relative w-full h-full justify-between flex-col rounded-[51px] bg-[--g] p-9">
+        <div id="title" class="w-fit items-center gap-0.5 px-3.5 py-1.5 rounded-lg border-2 border-[--d] bg-[--d]">
+          <img src="/logo.png" alt="Medicex logo" class="w-9">
+          <h3 class="text-4xl text-[--f] font-semibold mono">Medicux</h3>
+        </div>
+        <div class="w-full flex-col justify-end gap-3.5">
+          <h2 class="text-[--d] text-[29px] font-bold capitalize leading-tight">your ultimate guide <br>to health and<br>wellness</h2>
+          <button class="w-fit px-5 py-2.5 rounded-3xl text-[--t] bg-[--w] font-medium">Book Consultation</button>
+        </div>
+        <img src="/healthcare.png" alt="office" class="absolute top-[25%] right-11 w-64">
+      </div>
+    </div>
+  </section>
+
+  <footer class="w-full items-center justify-center p-14 pb-5 rounded-t-[55px] bg-[--d] mt-7">
+    <div class="w-full aspect-[4/1.35] flex-col gap-3.5 justify-between p-11 pb-3.5 bg-[--w] rounded-t-[45px] rounded-b">
+      <div class="w-full justify-between gap-9">
+        <div class="w-full flex-col gap-5">
+          <h3 class="text-3xl text-[--d] font-bold capitalize">Company</h3>
+          <ul class="flex-col pl-5 gap-2.5">
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">What's New</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">about us</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">news & blog</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">careers</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">social</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">branches</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full flex-col gap-5">
+          <h3 class="text-3xl text-[--d] font-bold capitalize">community</h3>
+          <ul class="flex-col pl-5 gap-2.5">
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">Medicux for business</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">blood donation</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">immunisations</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">circumcisions</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">nursing school</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">career guidance</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full flex-col gap-5">
+          <h3 class="text-3xl text-[--d] font-bold capitalize">our outlets</h3>
+          <ul class="flex-col pl-5 gap-2.5">
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">Uganda</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">kenya</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">Tanzania</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">Burundi</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">Rwanda</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full flex-col gap-5">
+          <h3 class="text-3xl text-[--d] font-bold capitalize">Our Projects</h3>
+          <ul class="flex-col pl-5 gap-2.5">
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">cancer research</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">hIV/AIDS</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">pathology</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">vaccination</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">clinical camps</a>
+            </li>
+            <li class="flex items-center capitalize">
+              <a href="#" class="text-[--t] text-lg font-semibold">counseling</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <span class="w-full h-[1px] bg-[--l] mt-7"></span>
+      <div class="w-full justify-between">
+        <p class="text-lg text-[--t] font-semibold capitalize">all rights reserved <span id="date"></span><span class="mono text-[--d]"> &copy;Medicux</span></p>
+        <div class="w-fit items-center justify-end gap-5">
+          <a href="tel:+256758185721" class="w-12 flex items-center justify-center text-[--d] text-3xl aspect-square rounded-full bg-[--l] hover:text-[--t]">
+            <i class="ph ph-phone-call"></i>
+          </a>
+          <a href="mailto:medicux@gmail.com" class="w-12 flex items-center justify-center text-[--d] text-3xl aspect-square rounded-full bg-[--l] hover:text-[--t]">
+            <i class="ph ph-envelope"></i>
+          </a>
+          <a href="https://t.me/Medicux" class="w-12 flex items-center justify-center text-[--d] text-3xl aspect-square rounded-full bg-[--l] hover:text-[--t]">
+            <i class="ph-fill ph-telegram-logo"></i>
+          </a>
+          <a href="https://twitter.com/Medicux" class="w-12 flex items-center justify-center text-[--d] text-3xl aspect-square rounded-full bg-[--l] hover:text-[--t]">
+            <i class="ph-fill ph-twitter-logo"></i>
+          </a>
+          <a href="https://youtube.com/Medicux" class="w-12 flex items-center justify-center text-[--d] text-3xl aspect-square rounded-full bg-[--l] hover:text-[--t]">
+            <i class="ph-fill ph-youtube-logo"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--
+    <a href="https://www.flaticon.com/free-icons/microphone" title="microphone icons">Microphone icons created by Freepik - Flaticon</a>
+    <a href="" title="hormones icons">Hormones icons created by Smashicons - Flaticon</a>
+    <a href="" title="thymus icons">Thymus icons created by justicon - Flaticon</a>
+    <a href="https://www.flaticon.com/free-icons/mri" title="mri icons">Mri icons created by B.Genesis - Flaticon</a>
+  -->
+
+  <!-- my javascript code-->
+  <script src="main.js"></script>
+</body>
+</html>
